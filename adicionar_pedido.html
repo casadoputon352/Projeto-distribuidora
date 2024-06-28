@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Adicionar Pedido</h1>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.data.label(class="form-control-label") }}
+            {{ form.data(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.cliente_id.label(class="form-control-label") }}
+            {{ form.cliente_id(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+{% endblock %}
